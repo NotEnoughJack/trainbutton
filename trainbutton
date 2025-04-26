@@ -1,0 +1,65 @@
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local RunService = game:GetService("RunService")
+
+local targetRemote = workspace.Map.Destructible.Model.StationControl.Handle.Train
+
+local function createCircleGui()
+    local existingGui = LocalPlayer.PlayerGui:FindFirstChild("CircleGui")
+    if existingGui then return existingGui end
+
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+    screenGui.Name = "CircleGui"
+    screenGui.ResetOnSpawn = false 
+
+    local circleButton = Instance.new("TextButton")
+    circleButton.Name = "CircleButton"
+    circleButton.Parent = screenGui
+    circleButton.Size = UDim2.new(0, 100, 0, 100)
+    circleButton.Position = UDim2.new(0.87, -50, 0.5, -450)
+    circleButton.AnchorPoint = Vector2.new(0.5, 0.5)
+    circleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) 
+    circleButton.Text = ""
+    circleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+    local function clickAnimation()
+        local downTween = TweenService:Create(circleButton, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+            Size = UDim2.new(0, 90, 0, 90)
+        })
+        local upTween = TweenService:Create(circleButton, TweenInfo.new(0.2, Enum.EasingStyle.Bounce, Enum.EasingDirection.Out), {
+            Size = UDim2.new(0, 100, 0, 100)
+        })
+
+        downTween:Play()
+        downTween.Completed:Connect(function()
+            upTween:Play()
+        end)
+    end
+
+    circleButton.MouseButton1Click:Connect(function()
+        clickAnimation()
+        targetRemote:FireServer()
+    end)
+
+    RunService.RenderStepped:Connect(function()
+        local prompt = workspace:FindFirstChild("Map") 
+            and workspace.Map:FindFirstChild("Destructible") 
+            and workspace.Map.Destructible:FindFirstChild("Model") 
+            and workspace.Map.Destructible.Model:FindFirstChild("StationControl") 
+            and workspace.Map.Destructible.Model.StationControl:FindFirstChild("ButtonTrain") 
+            and workspace.Map.Destructible.Model.StationControl.ButtonTrain:FindFirstChild("Button") 
+            and workspace.Map.Destructible.Model.StationControl.ButtonTrain.Button:FindFirstChild("Button")
+
+        if prompt and prompt:IsA("ProximityPrompt") and prompt.Enabled then
+            circleButton.BackgroundColor3 = Color3.fromRGB(91, 154, 76) 
+        else
+            circleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) 
+        end
+    end)
+
+    return screenGui
+end
+
+createCircleGui()
