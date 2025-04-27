@@ -30,6 +30,7 @@ local ButtonData = {
     { Title = "Simple Domain", Description = "Made for JJS Y To Activate", ScriptPath = "gyyfyu/test2/refs/heads/main/no%20key%20system/simple%20domain.lua" },
     { Title = "Lock on", Description = "J To Toggle | Right Mouse button to lock", ScriptPath = "gyyfyu/test2/refs/heads/main/no%20key%20system/lockon.lua" },
     { Title = "Jujustu Shenanigans", Description = "Custom Character The middle", ScriptPath = "NotEnoughJack/trainbutton/refs/heads/main/themiddle" },
+    { Title = "Save Instance", Description = "Saves instance into file", ScriptPath = "NotEnoughJack/trainbutton/refs/heads/main/saveinstance" },
     { Title = "Jerk off", Description = "BROKEN", ScriptPath = "NotEnoughJack/trainbutton/refs/heads/main/jerk" },
     -- Add more buttons here as needed...
 }
