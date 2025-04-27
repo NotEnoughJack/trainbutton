@@ -5,7 +5,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 -- Create Window
 local Window = Fluent:CreateWindow({
-    Title = "Compass Hub " .. Fluent.Version,
+    Title = "JackHub V1" .. Fluent.Version,
     SubTitle = "by NotEnoughJack",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
@@ -30,7 +30,7 @@ local ButtonData = {
     { Title = "Simple Domain", Description = "Made for JJS Y To Activate", ScriptPath = "gyyfyu/test2/refs/heads/main/no%20key%20system/simple%20domain.lua" },
     { Title = "Lock on", Description = "J To Toggle | Right Mouse button to lock", ScriptPath = "gyyfyu/test2/refs/heads/main/no%20key%20system/lockon.lua" },
     { Title = "Jujustu Shenanigans", Description = "Custom Character The middle", ScriptPath = "NotEnoughJack/trainbutton/refs/heads/main/themiddle" },
-    { Title = "Jerk off", Description = "Click to jerk", ScriptPath = "NotEnoughJack/trainbutton/refs/heads/main/jerk" },
+    { Title = "Jerk off", Description = "BROKEN", ScriptPath = "NotEnoughJack/trainbutton/refs/heads/main/jerk" },
     -- Add more buttons here as needed...
 }
 
@@ -86,7 +86,7 @@ Window:SelectTab(1)
 
 -- Notify that the script has loaded
 Fluent:Notify({
-    Title = "Compass",
+    Title = "JackHub",
     Content = "The script has been loaded.",
     Duration = 8
 })
