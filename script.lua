@@ -6,7 +6,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 -- Create Window
 local Window = Fluent:CreateWindow({
     Title = "JackHub V1" .. Fluent.Version,
-    SubTitle = "by NotEnoughJack",
+    SubTitle = "by Froppy",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false,
