@@ -21,9 +21,9 @@ local Tabs = {
 
 -- Button Data (can be modified externally if needed)
 local ButtonData = {
-    { Title = "Deadrails", Description = "Last checked 4/26/25", ScriptPath = "gumanba/Scripts/refs/heads/main/DeadRails" },
-    { Title = "Deadrails Auto", Description = "Last checked 4/26/25", ScriptPath = "gumanba/Scripts/refs/heads/main/DeadRailsAuto" },
-    { Title = "Infinite Yield", Description = "Last checked 4/26/25", ScriptPath = "edgeiy/infiniteyield/master/source" },
+    { Title = "Deadrails", Description = "Last checked 5/4/25", ScriptPath = "gumanba/Scripts/refs/heads/main/DeadRails" },
+    { Title = "Deadrails Auto", Description = "Updated 5/4/25", ScriptPath = "SevenIsYouScripts/Main/refs/heads/main/Auto%20Bonds%20Script" },
+    { Title = "Infinite Yield", Description = "Last checked 5/4/25", ScriptPath = "edgeiy/infiniteyield/master/source" },
     { Title = "Flight", Description = "X To Fly", ScriptPath = "gyyfyu/test2/refs/heads/main/no%20key%20system/fly.lua" },
     { Title = "Train Button", Description = "Made for JJS", ScriptPath = "NotEnoughJack/trainbutton/refs/heads/main/trainbutton" },
     { Title = "Teleport", Description = "C To Teleport", ScriptPath = "gyyfyu/test2/refs/heads/main/no%20key%20system/teleport.lua" },
